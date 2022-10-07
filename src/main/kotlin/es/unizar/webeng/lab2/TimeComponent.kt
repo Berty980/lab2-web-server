@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 import java.time.LocalDateTime
 
-
 data class TimeDTO(val time: LocalDateTime)
 
 interface TimeProvider {
@@ -13,7 +12,7 @@ interface TimeProvider {
 }
 
 @Service
-class TimeService: TimeProvider {
+class TimeService : TimeProvider {
     override fun now() = LocalDateTime.now()
 }
 
